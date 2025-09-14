@@ -1,0 +1,14 @@
+id: fb-shared-1
+displayName: Facebook
+template: Social-Link-Item-Template
+fields:
+  externalLink:
+    href: https://facebook.com/
+    target: "_blank"
+    text: "Facebook"
+    linktype: "external"
+    class: ""
+    title: "Follow us on Facebook"
+  iconClass:
+    value: "fa-brands fa-facebook-f"
+  logoImage: null

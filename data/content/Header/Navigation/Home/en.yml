@@ -1,0 +1,7 @@
+id: home-link
+displayName: Home
+template: NavLink-Item-Template
+fields:
+  linkText: Home
+  linkUrl:
+    href: "/"

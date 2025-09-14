@@ -1,0 +1,7 @@
+id: blog-link
+displayName: Blog
+template: NavLink-Item-Template
+fields:
+  linkText: Blog
+  linkUrl:
+    href: "/blog"

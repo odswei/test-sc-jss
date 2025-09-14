@@ -1,0 +1,14 @@
+id: twitter-shared-1
+displayName: Twitter
+template: Social-Link-Item-Template
+fields:
+  externalLink:
+    href: https://twitter.com/
+    target: "_blank"
+    text: "Twitter"
+    linktype: "external"
+    class: ""
+    title: "Follow us on Twitter"
+  iconClass:
+    value: "fa-brands fa-twitter"
+  logoImage: null

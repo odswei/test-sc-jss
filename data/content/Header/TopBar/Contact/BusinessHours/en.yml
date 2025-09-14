@@ -1,0 +1,8 @@
+id: business-hours-shared-1
+displayName: Business Hours
+# Template defines the available fields. See /sitecore/definitions/templates/Styleguide-ContentList-Template.sitecore.js
+template: Header-Top-Bar-Contact-Template
+fields:
+  textField: Mon-Sat 9:00-19:00
+
+

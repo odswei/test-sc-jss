@@ -1,0 +1,7 @@
+id: page-link
+displayName: Page
+template: NavLink-Item-Template
+fields:
+  linkText: Page
+  linkUrl:
+    href: "/page"

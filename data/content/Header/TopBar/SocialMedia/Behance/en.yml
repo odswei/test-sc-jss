@@ -1,0 +1,14 @@
+id: behance-shared-1
+displayName: Behance
+template: Social-Link-Item-Template
+fields:
+  externalLink:
+    href: https://www.behance.net/
+    target: "_blank"
+    text: "Behance"
+    linktype: "external"
+    class: ""
+    title: "Follow us on Behance"
+  iconClass:
+    value: "fa-brands fa-behance"
+  logoImage: null

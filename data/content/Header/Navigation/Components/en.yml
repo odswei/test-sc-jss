@@ -1,0 +1,7 @@
+id: components-link
+displayName: Components
+template: NavLink-Item-Template
+fields:
+  linkText: Components
+  linkUrl:
+    href: "/components"

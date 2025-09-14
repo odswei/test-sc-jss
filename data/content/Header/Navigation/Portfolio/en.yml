@@ -1,0 +1,7 @@
+id: portfolio-link
+displayName: Portfolio
+template: NavLink-Item-Template
+fields:
+  linkText: Portfolio
+  linkUrl:
+    href: "/portfolio"

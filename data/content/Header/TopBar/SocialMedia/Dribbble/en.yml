@@ -1,0 +1,14 @@
+id: dribbble-shared-1
+displayName: Dribbble
+template: Social-Link-Item-Template
+fields:
+  externalLink:
+    href: https://dribbble.com/
+    target: "_blank"
+    text: "Behance"
+    linktype: "external"
+    class: ""
+    title: "Follow us on Dribbble"
+  iconClass:
+    value: "fa-solid fa-basketball"
+  logoImage: null

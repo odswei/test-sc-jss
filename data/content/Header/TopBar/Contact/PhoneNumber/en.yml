@@ -1,0 +1,6 @@
+id: phone-number-shared-1
+displayName: Phone Number
+# Template defines the available fields. See /sitecore/definitions/templates/Styleguide-ContentList-Template.sitecore.js
+template: Header-Top-Bar-Contact-Template
+fields:
+  textField: 1234-5678-9012

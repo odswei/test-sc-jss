@@ -1,0 +1,145 @@
+# This is a route layout definition.
+# The route definition defines which Sitecore components are present on a route,
+# what their content data is, and which _placeholder_ they are placed in.
+
+# This particular route definition is for the home route - '/', so it defines the
+# components shown on the initial page of the app.
+
+# You may use equivalent JSON files instead of YAML if you prefer;
+# however YAML is simpler to read and allows comments like this one :)
+
+# Setting an ID is optional, but it will allow referring to this item in internal links
+# the ID can be a app-wide-unique string, or a GUID value.
+id: home-page
+
+# Route-level fields are appropriate for page level data like <title> contents
+# Define route level fields in /sitecore/definitions/routes.sitecore
+fields:
+  pageTitle: Welcome to Sitecore JSS
+# Define the page layout starting at the root placeholder - in this case, 'jss-main'
+# root placeholder names are defined in the package.json config section (required for Sitecore deployment)
+placeholders:
+  jss-header:
+    - componentName: Header
+      fields:
+        sharedHeaderTopBarContact: 
+          - id: 
+              phone-number-shared-1
+          - id: 
+              email-shared-1
+          - id:
+              business-hours-shared-1
+        sharedHeaderTopBarSocialMedia: 
+          - id: 
+              fb-shared-1
+          - id: 
+              twitter-shared-1
+          - id:
+              behance-shared-1
+          - id: 
+              dribbble-shared-1
+          - id: 
+              linkedin-shared-1
+          - id:
+              youtube-shared-1
+        logo: |
+          <h1>
+            <span>CONST</span>RUCTION 
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+          </h1>
+        sharedNavLinks:
+          - id:
+              home-link
+          - id:
+              page-link
+          - id:
+              blog-link
+          - id:
+              portfolio-link
+          - id:
+              components-link
+          - id:
+              contact-link
+    - componentName: HeroBanner
+      fields:
+        heading: We are Certified Engineers
+        subheading: |
+            Construction services<br>
+            <span>Creative AND professional</span>
+        content: |
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore fuga debitis distinctio doloribus quis adipisci asperiores soluta quidem nemo aperiam maiores tempora, accusamus minus odit magni corporis molestias dignissimos porro? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione assumenda recusandae earum totam fuga!</p>
+        ctaButton1: 
+          href: "/show-more"
+          text: "Show More"
+        ctaButton2:
+          href: "/view-project"
+          text: "View Project"
+
+
+  jss-main:
+    - componentName: ContentBlock
+      fields:
+        content: |
+          <div>Hello</div>
+  jss-footer:
+    - componentName: Footer
+      fields:
+        # to author content in YAML, use _multi-line values_ (prefixed with | + endline)
+        # as long as the same indent is preserved at the beginning of each line, no escaping
+        # is required at all in the value, making it easy to read
+        content: |
+          <section id="sec-6">
+            <div class="container">
+              <div class="about">
+                  <h1>About Company</h1>
+                  <h2>
+                      CONSTRUCTION 
+                      <p>Lorem ipsum dolor sit amit.</p>
+                  </h2>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus eius nisi repudiandae ipsam pariatur, quos perspiciatis eaque officia rerum odio modi sed fugiat mollitia? Rerum, architecto obcaecati!</p>
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></i></a>
+                  <a href="#"><i class="fab fa-linkedin-in"></i></a>  
+                  <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                  <a href="#"><i class="fab fa-youtube-square"></i></a>
+              </div>
+              <div class="links">
+                  <h1>Explor links</h1>
+                  <a href="#">Our services</a>
+                  <a href="#">Meet our team</a>
+                  <a href="#">Forum</a>
+                  <a href="#">Help center</a>
+                  <a href="#">Contact Us</a>
+                  <a href="#">Privacy Policy</a>
+                  <a href="#">Our terms</a>
+                  <a href="#">Site map</a>
+              </div>
+              <div class="posts">
+                  <h1>Latest posts</h1>
+                  <a href="#"><span>20<br>AUG</span>Lorem ipsum dolor sit stiae tempora</a>
+                  <a href="#"><span>20<br>AUG</span>Lorem ipsum dolor sit stiae tempora</a>
+                  <a href="#"><span>20<br>AUG</span>Lorem ipsum dolor sit stiae tempora</a>
+                  <a href="#"><span>20<br>AUG</span>Lorem ipsum dolor sit stiae tempora</a>
+                  <a href="#"><span>20<br>AUG</span>Lorem ipsum dolor sit stiae tempora</a>
+              </div>
+              <div class="contact">
+                  <h1>Contact us</h1>
+                  <p>123 New Line, London UK</p>
+                  <p>Hello@contact-us.com</p>
+                  <p>+44 00 00 1234<br>+44 00 00 1234</p>
+              </div>
+            </div>
+          </section>
+    - componentName: Footer
+      fields:
+        # to author content in YAML, use _multi-line values_ (prefixed with | + endline)
+        # as long as the same indent is preserved at the beginning of each line, no escaping
+        # is required at all in the value, making it easy to read
+        content: |
+          <section id="sec-7">
+              <div class="container">
+                  <p>Copyright @2022 | Designed by <span>Web Technologies Team</span></p>
+              </div>
+          </section>
+
+

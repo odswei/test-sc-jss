@@ -1,0 +1,17 @@
+id: youtube-shared-1
+displayName: YouTube
+template: Social-Link-Item-Template
+fields:
+  externalLink:
+    href: https://youtube.com/
+    target: "_blank"
+    text: "YouTube"
+    linktype: "external"
+    class: ""
+    title: "Watch us on YouTube"
+  iconClass: null
+  logoImage:
+    src: "/data/media/img/social/youtube-logotype.png"
+    alt: "YouTube"
+    width: 22
+    height: 22
