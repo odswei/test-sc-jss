@@ -31,7 +31,6 @@ type OurServicesProps = ComponentProps & {
 };
 
 const OurServices = (props: OurServicesProps): JSX.Element => {
-
   if (!props.fields?.ourServices?.length) {
     return <></>;
   }
