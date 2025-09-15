@@ -8,6 +8,16 @@ import packageJson from '../../../package.json';
  * @param {Manifest} manifest Manifest instance to add components to
  */
 export default function LatestPost(manifest: Manifest): void {
+  manifest.addRouteType({
+    name: 'LatestPostRouteType',
+    icon: SitecoreIcon.DocumentTag,
+    fields: [
+      { name: 'day', type: CommonFieldTypes.Number},
+      { name: 'month', type: CommonFieldTypes.SingleLineText},
+      { name: 'title', type: CommonFieldTypes.SingleLineText}
+    ]
+  })
+
   manifest.addComponent({
     name: 'LatestPost',
     icon: SitecoreIcon.DocumentTag,
@@ -20,14 +30,4 @@ export default function LatestPost(manifest: Manifest): void {
       },
     ],
   });
-
-  manifest.addTemplate({
-    name: 'Latest-Post-Item-Template',
-    icon: SitecoreIcon.DocumentTag,
-    fields: [
-      { name: 'day', type: CommonFieldTypes.Number},
-      { name: 'month', type: CommonFieldTypes.SingleLineText},
-      { name: 'title', type: CommonFieldTypes.SingleLineText}
-    ]
-  })
 }

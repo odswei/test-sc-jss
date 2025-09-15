@@ -27,10 +27,12 @@ placeholders:
           - id: email-shared-1
           - id: business-hours-shared-1
         logo: |
-          <h1>
-            <span>CONST</span>RUCTION 
-            <p>Lorem ipsum dolor sit amet consectetur.</p>
-          </h1>
+          <a href="/" class="text-decoration-none">
+            <h1>
+              <span>CONST</span>RUCTION 
+              <p>Lorem ipsum dolor sit amet consectetur.</p>
+            </h1>
+          </a>
       placeholders:
         jss-header-social:
           - componentName: SocialMedia

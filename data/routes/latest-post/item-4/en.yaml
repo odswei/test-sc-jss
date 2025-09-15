@@ -1,6 +1,6 @@
 id: latest-post-item-4
 displayName: Item 4
-template: Latest-Post-Item-Template
+template: LatestPostRouteType
 fields:
   day: 20
   month: AUG
