@@ -34,14 +34,14 @@ const LatestPost = ({ fields }: LatestPostProps): JSX.Element => (
     </h1>
     {fields.latestPost?.map((item, index) => (
       <>
-      <Link key={index} field={{ value: { href: item.url } }} editable={false}>
+        <Link key={index} field={{ value: { href: item.url } }} editable={false}>
           <span>
             {item.fields.day?.value}
             <br />
             {item.fields.month?.value}
           </span>
           {item.fields.title?.value}
-      </Link>
+        </Link>
       </>
     ))}
   </>

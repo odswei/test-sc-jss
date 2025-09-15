@@ -39,7 +39,7 @@ const SocialMedia = (props: SocialMediaProps): JSX.Element => {
         const image = item.fields.logoImage?.value;
 
         return link?.value ? (
-          <Link key={index} field={item.fields.externalLink} editable={false} >
+          <Link key={index} field={item.fields.externalLink} editable={false}>
             {iconClass ? (
               <i className={item.fields.iconClass?.value}></i>
             ) : (

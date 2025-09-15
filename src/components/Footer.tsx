@@ -30,7 +30,6 @@ const Footer = (props: FooterProps): JSX.Element => {
           <Placeholder name="jss-footer-center" rendering={rendering} />
         </div>
         <div className="contact">
-
           <Placeholder name="jss-footer-right" rendering={rendering} />
         </div>
       </div>
