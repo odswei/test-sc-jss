@@ -134,14 +134,7 @@ placeholders:
                   +44 00 00 1234
                 </p>
 
-    # - componentName: Footer
-    #   fields:
-    #     # to author content in YAML, use _multi-line values_ (prefixed with | + endline)
-    #     # as long as the same indent is preserved at the beginning of each line, no escaping
-    #     # is required at all in the value, making it easy to read
-    #     content: |
-    #       <section id="sec-7">
-    #           <div class="container">
-    #               <p>Copyright @2022 | Designed by <span>Web Technologies Team</span></p>
-    #           </div>
-    #       </section>
+    - componentName: FooterLegal
+      fields:
+        content: |
+          <p>Copyright @2022 | Designed by <span>Web Technologies Team</span></p>

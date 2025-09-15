@@ -3,7 +3,7 @@ import { CommonFieldTypes, SitecoreIcon, Manifest } from '@sitecore-jss/sitecore
 import packageJson from '../../../package.json';
 
 /**
- * Adds the Navigation component to the disconnected manifest.
+ * Adds the LatestPost component to the disconnected manifest.
  * This function is invoked by convention (*.sitecore.ts) when 'jss manifest' is run.
  * @param {Manifest} manifest Manifest instance to add components to
  */

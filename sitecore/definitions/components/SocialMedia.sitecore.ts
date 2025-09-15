@@ -2,11 +2,11 @@ import { CommonFieldTypes, SitecoreIcon, Manifest } from '@sitecore-jss/sitecore
 import packageJson from '../../../package.json';
 
 /**
- * Adds the Footer component to the disconnected manifest.
+ * Adds the SocialMedia component to the disconnected manifest.
  * This function is invoked by convention (*.sitecore.js) when `jss manifest` is run.
  * @param {Manifest} manifest Manifest instance to add components to
  */
-export default function SpcialMedia(manifest: Manifest): void {
+export default function SocialMedia(manifest: Manifest): void {
   manifest.addComponent({
     name: 'SocialMedia',
     icon: SitecoreIcon.DocumentTag,

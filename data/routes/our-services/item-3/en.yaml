@@ -22,6 +22,16 @@ placeholders:
             <p>Lorem ipsum dolor sit amet consectetur.</p>
           </h1>
       placeholders:
+        jss-header-social:
+          - componentName: SocialMedia
+            fields:
+              sharedSocialMedia:
+                - id: fb-shared-1
+                - id: twitter-shared-1
+                - id: behance-shared-1
+                - id: dribbble-shared-1
+                - id: linkedin-header-shared-1
+                - id: youtube-footer-shared-1
         jss-header-navigation:
           - componentName: NavigationHeader
             fields:
@@ -32,9 +42,69 @@ placeholders:
                 - id: portfolio-link
                 - id: components-link
                 - id: contact-link
+                
   jss-main:
     - componentName: ContentBlock
       fields:
         heading: Lorem ipsum dolor sit amet
         content: |
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum expedita tempora quam omnis deleniti!(word break with hyphen test) jjjjjjjjjjjjjjjjjjhuyiouuioiuojjjjjjjjjjj54455555788uiyuuihjhhjhjh Consequuntur, distinctio magnam beatae dignissimos assumenda quisquam accusamus similique aut esse pariatur consectetur ab adipisci cupiditate sint maxime dolorum doloremque autem quasi nostrum nobis dicta? Sit ipsum enim sint quos quod nulla consequuntur amet voluptates. Voluptate cum facilis libero rem veritatis?</p>
+  jss-footer:
+    - componentName: Footer
+      fields:
+        content: |
+          <h1>About Company</h1>
+          <h2>
+              CONSTRUCTION 
+              <p>Lorem ipsum dolor sit amit.</p>
+          </h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus eius nisi repudiandae ipsam pariatur, quos perspiciatis eaque officia rerum odio modi sed fugiat mollitia? Rerum, architecto obcaecati!</p>
+      placeholders:
+        jss-footer-social:
+          - componentName: SocialMedia
+            fields:
+              sharedSocialMedia:
+                - id: fb-shared-1
+                - id: twitter-shared-1
+                - id: linkedin-footer-shared-1
+                - id: google-plus-shared-1
+                - id: youtube-footer-shared-1
+        jss-footer-left:
+          - componentName: NavigationFooter
+            fields:
+              title: Explore Links
+              sharedNavLinks:
+                - id: our-services-link
+                - id: meet-our-team-link
+                - id: forum-link
+                - id: help-center-link
+                - id: privacy-policy-link
+                - id: our-terms-link
+                - id: sitemap-link
+        jss-footer-center:
+          - componentName: LatestPost
+            fields:
+              title: Latest Post
+              latestPost:
+                - id: latest-post-item-1
+                - id: latest-post-item-2
+                - id: latest-post-item-3
+                - id: latest-post-item-4
+                - id: latest-post-item-5
+        jss-footer-right:
+          - componentName: FooterContactUs
+            fields:
+              title: Contact Us
+              content: |
+                <p>123 New Line, London UK</p>
+                <p>Hello@contact-us.com</p>
+                <p>
+                  +44 00 00 1234
+                  <br />
+                  +44 00 00 1234
+                </p>
+
+    - componentName: FooterLegal
+      fields:
+        content: |
+          <p>Copyright @2022 | Designed by <span>Web Technologies Team</span></p>
