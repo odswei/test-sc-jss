@@ -11,8 +11,6 @@ type FooterProps = ComponentProps & {
 /**
  * Footer component, with a rich text block.
  */
-const Footer = ({ fields }: FooterProps): JSX.Element => (
-   <RichText field={fields.content} />
-);
+const Footer = ({ fields }: FooterProps): JSX.Element => <RichText field={fields.content} />;
 
 export default withDatasourceCheck()<FooterProps>(Footer);

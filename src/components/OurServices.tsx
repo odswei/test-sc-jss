@@ -1,51 +1,70 @@
+import React from 'react';
 import {
   Text,
-  Field,
-  ImageField,
-  withDatasourceCheck,
   NextImage,
-  RichText
+  ImageField,
+  TextField,
+  RichTextField,
+  Link,
+  withDatasourceCheck,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 import { JSX } from 'react';
 
-// Define the type for each item in the array
-type OurServiceItem = {
+type ServiceItem = {
   id: string;
-  name: string;
+  url: string;
   fields: {
-    heading: Field<string>;
-    description: Field<string>;
+    title: TextField;
+    description: RichTextField;
     image: ImageField;
+    ctaButtonText: TextField;
   };
 };
 
 type OurServicesProps = ComponentProps & {
   fields: {
-    ourServices: OurServiceItem[];
+    heading: TextField;
+    ctaButtonText: TextField;
+    ourServices: ServiceItem[];
   };
 };
 
 const OurServices = (props: OurServicesProps): JSX.Element => {
-  const { ourServices } = props.fields;
+  console.log(props);
 
-  if (!ourServices || ourServices.length === 0) {
-    return <p>No services available.</p>;
+  if (!props.fields?.ourServices?.length) {
+    return <></>;
   }
 
-  console.log(ourServices)
   return (
-    <div>
-      <p>OurServices Component</p>
-
-      {ourServices.map((service) => (
-        <div key={service.id}>
-          <Text field={service.fields.heading} tag="h2" />
-          <RichText field={service.fields.description} />
-          <NextImage field={service.fields.image} />
+    <section id="sec-3">
+      <div className="container">
+        <h1>
+          <Text field={props.fields.heading}></Text>
+        </h1>
+        <div className="cont">
+          {props.fields.ourServices.map((service) => (
+            <div key={service.id} className="card border-0">
+              <div>
+                <NextImage field={service.fields.image} className="card-img-top" alt="..." />
+                <h5 className="caption">
+                  <Text field={service.fields.title} />
+                </h5>
+              </div>
+              <div className="card-body px-0 pt-4">
+                <p>
+                  <Text field={service.fields.description} />
+                </p>
+                <Link field={{ value: { href: service.url } }}>
+                  <Text field={props.fields.ctaButtonText}></Text>
+                </Link>
+              </div>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+      </div>
+    </section>
   );
 };
 

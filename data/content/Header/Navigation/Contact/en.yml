@@ -2,6 +2,7 @@ id: contact-link
 displayName: Contact
 template: NavLink-Item-Template
 fields:
-  linkText: Contact
   linkUrl:
     href: "/contact"
+    text: Contact
+    linktype: internal

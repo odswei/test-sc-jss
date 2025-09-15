@@ -9,7 +9,7 @@ export default function Footer(manifest: Manifest): void {
   manifest.addComponent({
     name: 'HeroBanner',
     templateName: 'HeroBanner',
-    icon: SitecoreIcon.EmoticonSmile,
+    icon: SitecoreIcon.DocumentTag,
     fields: [
       { name: 'heading', type: CommonFieldTypes.SingleLineText },
       { name: 'subheading', type: CommonFieldTypes.RichText },

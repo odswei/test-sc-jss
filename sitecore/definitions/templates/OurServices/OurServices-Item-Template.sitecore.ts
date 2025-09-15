@@ -8,9 +8,9 @@ export default function HeaderTopBarContactItemTemplate(manifest: Manifest): voi
   manifest.addTemplate({
     name: 'OurServices-Item-Template',
     fields: [
-        { name: 'heading', type: CommonFieldTypes.SingleLineText },
+        { name: 'title', type: CommonFieldTypes.SingleLineText },
         { name: 'description', type: CommonFieldTypes.MultiLineText },
-        { name: 'image', type: CommonFieldTypes.Image}
+        { name: 'image', type: CommonFieldTypes.Image},
     ],
   });
 }

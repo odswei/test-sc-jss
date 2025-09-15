@@ -22,11 +22,7 @@ export default function Header(manifest: Manifest): void {
         source: `dataSource=/sitecore/content/${packageJson.config.appName}/Content/Header/TopBar/SocialMedia`,
       },
       { name: 'logo', type: CommonFieldTypes.RichText },
-      {
-        name: 'sharedNavLinks',
-        type: CommonFieldTypes.ContentList,
-        source: `dataSource=/sitecore/content/${packageJson.config.appName}/Content/Header/Navigation`,
-      },
     ],
+    placeholders: ['jss-header-navigation'],
   });
 }

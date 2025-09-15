@@ -1,6 +1,6 @@
 import { JSX } from 'react';
 import Head from 'next/head';
-import { Placeholder, LayoutServiceData, Field, HTMLLink } from '@sitecore-jss/sitecore-jss-nextjs';
+import { Placeholder, LayoutServiceData, HTMLLink } from '@sitecore-jss/sitecore-jss-nextjs';
 import config from 'temp/config';
 // import Navigation from 'src/Navigation';
 import Scripts from 'src/Scripts';
@@ -14,10 +14,10 @@ interface LayoutProps {
   headLinks: HTMLLink[];
 }
 
-interface RouteFields {
-  [key: string]: unknown;
-  pageTitle: Field;
-}
+// interface RouteFields {
+//   [key: string]: unknown;
+//   pageTitle: Field;
+// }
 
 const Layout = ({ layoutData, headLinks }: LayoutProps): JSX.Element => {
   const { route } = layoutData.sitecore;
@@ -34,9 +34,6 @@ const Layout = ({ layoutData, headLinks }: LayoutProps): JSX.Element => {
           <link rel={headLink.rel} key={headLink.href} href={headLink.href} />
         ))}
       </Head>
-
-      {/* <Navigation /> */}
-      {/* root placeholder for the app, which we add components to using route data */}
       <body>
         <section id="sec-0">
           <div>{route && <Placeholder name="jss-header" rendering={route} />}</div>

@@ -8,7 +8,6 @@ export default function NavLinkItemTemplate(manifest: Manifest): void {
   manifest.addTemplate({
     name: 'NavLink-Item-Template',
     fields: [
-      { name: 'linkText', type: CommonFieldTypes.SingleLineText },
       { name: 'linkUrl', type: CommonFieldTypes.GeneralLink },
     ],
   });

@@ -47,19 +47,17 @@ placeholders:
             <span>CONST</span>RUCTION 
             <p>Lorem ipsum dolor sit amet consectetur.</p>
           </h1>
-        sharedNavLinks:
-          - id:
-              home-link
-          - id:
-              page-link
-          - id:
-              blog-link
-          - id:
-              portfolio-link
-          - id:
-              components-link
-          - id:
-              contact-link
+      placeholders:
+        jss-header-navigation:
+          - componentName: Navigation
+            fields:
+              sharedNavLinks:
+                - id: home-link
+                - id: page-link
+                - id: blog-link
+                - id: portfolio-link
+                - id: components-link
+                - id: contact-link
     - componentName: HeroBanner
       fields:
         heading: We are Certified Engineers
@@ -69,18 +67,23 @@ placeholders:
         content: |
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore fuga debitis distinctio doloribus quis adipisci asperiores soluta quidem nemo aperiam maiores tempora, accusamus minus odit magni corporis molestias dignissimos porro? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione assumenda recusandae earum totam fuga!</p>
         ctaButton1: 
-          href: "/show-more"
-          text: "Show More"
+          href: "/our-services/item-1"
+          linktype: internal
+          text: Show More
         ctaButton2:
-          href: "/view-project"
-          text: "View Project"
-
+          href: "/our-services/item-1"
+          linktype: internal
+          text: View Project
 
   jss-main:
-    - componentName: ContentBlock
+    - componentName: OurServices
       fields:
-        content: |
-          <div>Hello</div>
+        heading: Our services
+        ctaButtonText: Show More
+        ourServices:
+          - id: our-services-item-1
+          - id: our-services-item-2
+          - id: our-services-item-3
   jss-footer:
     - componentName: Footer
       fields:

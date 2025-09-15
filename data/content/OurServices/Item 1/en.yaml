@@ -1,9 +1,0 @@
-id: our-services-item-1
-displayName: Item 1
-# Template defines the available fields. See /sitecore/definitions/templates/Styleguide-ContentList-Template.sitecore.js
-template: OurServices-Item-Template
-fields:
-  heading: ContentList Demo (Shared) Item 1 Text Field
-  description: ContentList Demo (Shared) Item 1 Text Field
-  image:
-    src: "/data/media/img/our-services/card1.jpg"

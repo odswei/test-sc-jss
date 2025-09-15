@@ -10,7 +10,7 @@ import {
   NextImage,
   RichText,
   RichTextField,
-  TextField,
+  Placeholder,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 
@@ -24,26 +24,23 @@ type SocialLinkItem = {
   };
 };
 
-type NavLink = {
-  fields: {
-    linkText: TextField;
-    linkUrl: LinkField;
-  };
-};
-
 type HeaderProps = ComponentProps & {
   fields: {
     logo: RichTextField;
     sharedHeaderTopBarContact: Item[];
     sharedHeaderTopBarSocialMedia: SocialLinkItem[];
-    sharedNavLinks: NavLink[];
   };
 };
 
 const Header = (props: HeaderProps): JSX.Element => {
-  const { sharedHeaderTopBarContact, sharedHeaderTopBarSocialMedia, logo, sharedNavLinks } =
-    props.fields;
-console.log(sharedNavLinks)
+  const { sharedHeaderTopBarContact, sharedHeaderTopBarSocialMedia, logo } = props.fields;
+
+  const rendering = props.rendering;
+
+  if (!props) {
+    return <></>;
+  }
+
   return (
     <>
       <header className="top">
@@ -61,12 +58,8 @@ console.log(sharedNavLinks)
               const image = item.fields.logoImage?.value;
 
               return link?.value ? (
-                <Link key={index} field={link}>
-                  {iconClass ? (
-                    <i className={iconClass}></i>
-                  ) : (
-                    image && <NextImage field={image} />
-                  )}
+                <Link key={index} field={link} editable={true}>
+                  {iconClass ? <i className={iconClass}></i> : image && <NextImage field={image} />}
                 </Link>
               ) : null;
             })}
@@ -89,12 +82,7 @@ console.log(sharedNavLinks)
           </label>
           <input type="checkbox" id="menu" />
           <nav>
-            {sharedNavLinks?.map((item, idx) => (
-              <Link key={idx} field={item.fields.linkUrl}>
-                <Text field={item.fields.linkText} />
-              </Link>
-            ))}
-            <i className="fa-solid fa-magnifying-glass" id="search"></i>
+            <Placeholder name="jss-header-navigation" rendering={rendering} />
           </nav>
         </div>
       </header>
