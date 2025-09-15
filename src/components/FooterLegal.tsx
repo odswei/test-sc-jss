@@ -10,7 +10,7 @@ type ContentBlockProps = {
 const FooterLegal = ({ fields }: ContentBlockProps): JSX.Element => (
   <section id="sec-7">
     <div className="container">
-        <RichText field={fields.content} />
+      <RichText field={fields.content} />
     </div>
   </section>
 );

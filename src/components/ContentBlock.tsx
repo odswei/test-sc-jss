@@ -11,10 +11,13 @@ type ContentBlockProps = ComponentProps & {
 
 const ContentBlock = ({ fields }: ContentBlockProps): JSX.Element => (
   <>
-    { fields.heading?.value && <h1><Text field={fields.heading}/></h1> }
+    {fields.heading?.value && (
+      <h1>
+        <Text field={fields.heading} />
+      </h1>
+    )}
     <RichText field={fields.content} />
   </>
 );
 
 export default withDatasourceCheck()<ContentBlockProps>(ContentBlock);
-
