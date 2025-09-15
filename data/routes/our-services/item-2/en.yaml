@@ -8,6 +8,8 @@ fields:
   image:
     src: '/data/media/img/our-services/card2.jpg'
     alt: card2
+    width: 355
+    height: 260
 placeholders:
   jss-header:
     - componentName: Header
