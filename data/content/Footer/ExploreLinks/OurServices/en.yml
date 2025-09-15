@@ -1,0 +1,9 @@
+id: our-services-link
+displayName: Our Services
+template: NavLink-Item-Template
+fields:
+  linkUrl:
+    href: "/our-services/item-1"
+    text: Our Services
+    linktype: internal
+    

@@ -1,0 +1,7 @@
+id: latest-post-item-4
+displayName: Item 4
+template: Latest-Post-Item-Template
+fields:
+  day: 20
+  month: AUG
+  title: Lorem ipsum dolor sit stiae tempora

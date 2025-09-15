@@ -16,7 +16,7 @@ type NavigationProps = ComponentProps & {
   };
 };
 
-const Navigation = (props: NavigationProps): JSX.Element => {
+const NavigationHeader = (props: NavigationProps): JSX.Element => {
   if (!props.fields?.sharedNavLinks?.length) {
     return <></>;
   }
@@ -31,4 +31,4 @@ const Navigation = (props: NavigationProps): JSX.Element => {
   );
 };
 
-export default withDatasourceCheck()<NavigationProps>(Navigation);
+export default withDatasourceCheck()<NavigationProps>(NavigationHeader);

@@ -1,0 +1,8 @@
+id: our-terms-link
+displayName: Our Terms
+template: NavLink-Item-Template
+fields:
+  linkUrl:
+    href: "/our-terms"
+    text: Our Terms
+    linktype: internal

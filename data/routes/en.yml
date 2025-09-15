@@ -22,34 +22,28 @@ placeholders:
   jss-header:
     - componentName: Header
       fields:
-        sharedHeaderTopBarContact: 
-          - id: 
-              phone-number-shared-1
-          - id: 
-              email-shared-1
-          - id:
-              business-hours-shared-1
-        sharedHeaderTopBarSocialMedia: 
-          - id: 
-              fb-shared-1
-          - id: 
-              twitter-shared-1
-          - id:
-              behance-shared-1
-          - id: 
-              dribbble-shared-1
-          - id: 
-              linkedin-shared-1
-          - id:
-              youtube-shared-1
+        sharedHeaderTopBarContact:
+          - id: phone-number-shared-1
+          - id: email-shared-1
+          - id: business-hours-shared-1
         logo: |
           <h1>
             <span>CONST</span>RUCTION 
             <p>Lorem ipsum dolor sit amet consectetur.</p>
           </h1>
       placeholders:
+        jss-header-social:
+          - componentName: SocialMedia
+            fields:
+              sharedSocialMedia:
+                - id: fb-shared-1
+                - id: twitter-shared-1
+                - id: behance-shared-1
+                - id: dribbble-shared-1
+                - id: linkedin-header-shared-1
+                - id: youtube-footer-shared-1
         jss-header-navigation:
-          - componentName: Navigation
+          - componentName: NavigationHeader
             fields:
               sharedNavLinks:
                 - id: home-link
@@ -58,20 +52,21 @@ placeholders:
                 - id: portfolio-link
                 - id: components-link
                 - id: contact-link
+                
     - componentName: HeroBanner
       fields:
         heading: We are Certified Engineers
         subheading: |
-            Construction services<br>
-            <span>Creative AND professional</span>
+          Construction services<br>
+          <span>Creative AND professional</span>
         content: |
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore fuga debitis distinctio doloribus quis adipisci asperiores soluta quidem nemo aperiam maiores tempora, accusamus minus odit magni corporis molestias dignissimos porro? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione assumenda recusandae earum totam fuga!</p>
-        ctaButton1: 
-          href: "/our-services/item-1"
+        ctaButton1:
+          href: '/our-services/item-1'
           linktype: internal
           text: Show More
         ctaButton2:
-          href: "/our-services/item-1"
+          href: '/our-services/item-1'
           linktype: internal
           text: View Project
 
@@ -87,62 +82,66 @@ placeholders:
   jss-footer:
     - componentName: Footer
       fields:
-        # to author content in YAML, use _multi-line values_ (prefixed with | + endline)
-        # as long as the same indent is preserved at the beginning of each line, no escaping
-        # is required at all in the value, making it easy to read
         content: |
-          <section id="sec-6">
-            <div class="container">
-              <div class="about">
-                  <h1>About Company</h1>
-                  <h2>
-                      CONSTRUCTION 
-                      <p>Lorem ipsum dolor sit amit.</p>
-                  </h2>
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus eius nisi repudiandae ipsam pariatur, quos perspiciatis eaque officia rerum odio modi sed fugiat mollitia? Rerum, architecto obcaecati!</p>
-                  <a href="#"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#"><i class="fab fa-twitter"></i></i></a>
-                  <a href="#"><i class="fab fa-linkedin-in"></i></a>  
-                  <a href="#"><i class="fab fa-google-plus-g"></i></a>
-                  <a href="#"><i class="fab fa-youtube-square"></i></a>
-              </div>
-              <div class="links">
-                  <h1>Explor links</h1>
-                  <a href="#">Our services</a>
-                  <a href="#">Meet our team</a>
-                  <a href="#">Forum</a>
-                  <a href="#">Help center</a>
-                  <a href="#">Contact Us</a>
-                  <a href="#">Privacy Policy</a>
-                  <a href="#">Our terms</a>
-                  <a href="#">Site map</a>
-              </div>
-              <div class="posts">
-                  <h1>Latest posts</h1>
-                  <a href="#"><span>20<br>AUG</span>Lorem ipsum dolor sit stiae tempora</a>
-                  <a href="#"><span>20<br>AUG</span>Lorem ipsum dolor sit stiae tempora</a>
-                  <a href="#"><span>20<br>AUG</span>Lorem ipsum dolor sit stiae tempora</a>
-                  <a href="#"><span>20<br>AUG</span>Lorem ipsum dolor sit stiae tempora</a>
-                  <a href="#"><span>20<br>AUG</span>Lorem ipsum dolor sit stiae tempora</a>
-              </div>
-              <div class="contact">
-                  <h1>Contact us</h1>
-                  <p>123 New Line, London UK</p>
-                  <p>Hello@contact-us.com</p>
-                  <p>+44 00 00 1234<br>+44 00 00 1234</p>
-              </div>
-            </div>
-          </section>
-    - componentName: Footer
-      fields:
-        # to author content in YAML, use _multi-line values_ (prefixed with | + endline)
-        # as long as the same indent is preserved at the beginning of each line, no escaping
-        # is required at all in the value, making it easy to read
-        content: |
-          <section id="sec-7">
-              <div class="container">
-                  <p>Copyright @2022 | Designed by <span>Web Technologies Team</span></p>
-              </div>
-          </section>
+          <h1>About Company</h1>
+          <h2>
+              CONSTRUCTION 
+              <p>Lorem ipsum dolor sit amit.</p>
+          </h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus eius nisi repudiandae ipsam pariatur, quos perspiciatis eaque officia rerum odio modi sed fugiat mollitia? Rerum, architecto obcaecati!</p>
+      placeholders:
+        jss-footer-social:
+          - componentName: SocialMedia
+            fields:
+              sharedSocialMedia:
+                - id: fb-shared-1
+                - id: twitter-shared-1
+                - id: linkedin-footer-shared-1
+                - id: google-plus-shared-1
+                - id: youtube-footer-shared-1
+        jss-footer-left:
+          - componentName: NavigationFooter
+            fields:
+              title: Explore Links
+              sharedNavLinks:
+                - id: our-services-link
+                - id: meet-our-team-link
+                - id: forum-link
+                - id: help-center-link
+                - id: privacy-policy-link
+                - id: our-terms-link
+                - id: sitemap-link
+        jss-footer-center:
+          - componentName: LatestPost
+            fields:
+              title: Latest Post
+              latestPost:
+                - id: latest-post-item-1
+                - id: latest-post-item-2
+                - id: latest-post-item-3
+                - id: latest-post-item-4
+                - id: latest-post-item-5
+        jss-footer-right:
+          - componentName: FooterContactUs
+            fields:
+              title: Contact Us
+              content: |
+                <p>123 New Line, London UK</p>
+                <p>Hello@contact-us.com</p>
+                <p>
+                  +44 00 00 1234
+                  <br />
+                  +44 00 00 1234
+                </p>
 
-
+    # - componentName: Footer
+    #   fields:
+    #     # to author content in YAML, use _multi-line values_ (prefixed with | + endline)
+    #     # as long as the same indent is preserved at the beginning of each line, no escaping
+    #     # is required at all in the value, making it easy to read
+    #     content: |
+    #       <section id="sec-7">
+    #           <div class="container">
+    #               <p>Copyright @2022 | Designed by <span>Web Technologies Team</span></p>
+    #           </div>
+    #       </section>

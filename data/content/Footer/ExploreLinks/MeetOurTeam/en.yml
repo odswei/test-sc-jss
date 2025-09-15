@@ -1,0 +1,8 @@
+id: meet-our-team-link
+displayName: Page
+template: NavLink-Item-Template
+fields:
+  linkUrl:
+    href: "/meet-our-team"
+    text: Meet Our Team
+    linktype: internal

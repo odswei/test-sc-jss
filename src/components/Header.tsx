@@ -4,36 +4,21 @@ import {
   Text,
   Item,
   withDatasourceCheck,
-  Link,
-  LinkField,
-  ImageField,
-  NextImage,
   RichText,
   RichTextField,
   Placeholder,
 } from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 
-type SocialLinkItem = {
-  fields: {
-    externalLink: LinkField;
-    iconClass?: {
-      value: string;
-    };
-    logoImage?: ImageField;
-  };
-};
-
 type HeaderProps = ComponentProps & {
   fields: {
     logo: RichTextField;
     sharedHeaderTopBarContact: Item[];
-    sharedHeaderTopBarSocialMedia: SocialLinkItem[];
   };
 };
 
 const Header = (props: HeaderProps): JSX.Element => {
-  const { sharedHeaderTopBarContact, sharedHeaderTopBarSocialMedia, logo } = props.fields;
+  const { sharedHeaderTopBarContact, logo } = props.fields;
 
   const rendering = props.rendering;
 
@@ -52,17 +37,7 @@ const Header = (props: HeaderProps): JSX.Element => {
               </p>
             ))}
           <div className="social">
-            {sharedHeaderTopBarSocialMedia?.map((item, index) => {
-              const link = item.fields.externalLink;
-              const iconClass = item.fields.iconClass?.value;
-              const image = item.fields.logoImage?.value;
-
-              return link?.value ? (
-                <Link key={index} field={link} editable={true}>
-                  {iconClass ? <i className={iconClass}></i> : image && <NextImage field={image} />}
-                </Link>
-              ) : null;
-            })}
+            <Placeholder name="jss-header-social" rendering={rendering} />
           </div>
         </div>
       </header>

@@ -1,0 +1,8 @@
+id: sitemap-link
+displayName: Sitemap
+template: NavLink-Item-Template
+fields:
+  linkUrl:
+    href: "/sitemap"
+    text: Sitemap
+    linktype: internal

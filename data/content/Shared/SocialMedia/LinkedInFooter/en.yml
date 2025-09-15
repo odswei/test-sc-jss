@@ -1,0 +1,14 @@
+id: linkedin-footer-shared-1
+displayName: LinkedIn
+template: Social-Link-Item-Template
+fields:
+  externalLink:
+    href: https://linkedin.com/
+    target: "_blank"
+    text: "LinkedIn"
+    linktype: "external"
+    class: ""
+    title: "Follow us on LinkedIn"
+  iconClass:
+    value: "fab fa-linkedin-in"
+  logoImage: null

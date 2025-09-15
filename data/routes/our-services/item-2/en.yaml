@@ -1,37 +1,21 @@
-id: our-services-item-1
-displayName: Item 1
+id: our-services-item-2
+displayName: Item 2
 template: OurServicesRouteType
 fields:
-  title: Construction Management
+  title: Renovation
   description: |
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum expedita tempora quam omnis deleniti!(word break with hyphen test) jjjjjjjjjjjjjjjjjjhuyiouuioiuojjjjjjjjjjj54455555788uiyuuihjhhjhjh Consequuntur, distinctio magnam beatae dignissimos assumenda quisquam accusamus similique aut esse pariatur consectetur ab adipisci cupiditate sint maxime dolorum doloremque autem quasi nostrum nobis dicta? Sit ipsum enim sint quos quod nulla consequuntur amet voluptates. Voluptate cum facilis libero rem veritatis?
   image:
-    src: "/data/media/img/our-services/card1.jpg"
-    alt: card1
+    src: '/data/media/img/our-services/card2.jpg'
+    alt: card2
 placeholders:
   jss-header:
     - componentName: Header
       fields:
-        sharedHeaderTopBarContact: 
-          - id: 
-              phone-number-shared-1
-          - id: 
-              email-shared-1
-          - id:
-              business-hours-shared-1
-        sharedHeaderTopBarSocialMedia: 
-          - id: 
-              fb-shared-1
-          - id: 
-              twitter-shared-1
-          - id:
-              behance-shared-1
-          - id: 
-              dribbble-shared-1
-          - id: 
-              linkedin-shared-1
-          - id:
-              youtube-shared-1
+        sharedHeaderTopBarContact:
+          - id: phone-number-shared-1
+          - id: email-shared-1
+          - id: business-hours-shared-1
         logo: |
           <h1>
             <span>CONST</span>RUCTION 
@@ -39,7 +23,7 @@ placeholders:
           </h1>
       placeholders:
         jss-header-navigation:
-          - componentName: Navigation
+          - componentName: NavigationHeader
             fields:
               sharedNavLinks:
                 - id: home-link

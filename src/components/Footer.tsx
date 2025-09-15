@@ -1,16 +1,41 @@
 import { JSX } from 'react';
-import { RichText, Field, withDatasourceCheck } from '@sitecore-jss/sitecore-jss-nextjs';
+import {
+  withDatasourceCheck,
+  Placeholder,
+  RichText,
+  RichTextField,
+} from '@sitecore-jss/sitecore-jss-nextjs';
 import { ComponentProps } from 'lib/component-props';
 
 type FooterProps = ComponentProps & {
   fields: {
-    content: Field<string>;
+    content: RichTextField;
   };
 };
 
-/**
- * Footer component, with a rich text block.
- */
-const Footer = ({ fields }: FooterProps): JSX.Element => <RichText field={fields.content} />;
+const Footer = (props: FooterProps): JSX.Element => {
+  const rendering = props.rendering;
+  console.log('test', props.rendering);
+  return (
+    <section id="sec-6">
+      <div className="container">
+        <div className="about">
+          <RichText field={props.fields.content} />
+          <Placeholder name="jss-footer-social" rendering={rendering} />
+        </div>
+        <div className="links">
+          <Placeholder name="jss-footer-left" rendering={rendering} />
+        </div>
+        <div className="posts">
+          <Placeholder name="jss-footer-center" rendering={rendering} />
+        </div>
+        <div className="contact">
+
+          <Placeholder name="jss-footer-right" rendering={rendering} />
+        </div>
+      </div>
+    </section>
+  );
+};
 
 export default withDatasourceCheck()<FooterProps>(Footer);

@@ -8,24 +8,25 @@ import packageJson from '../../../package.json';
  * @param {Manifest} manifest Manifest instance to add components to
  */
 export default function OurServices(manifest: Manifest): void {
-    manifest.addRouteType({
+  manifest.addRouteType({
     name: 'OurServicesRouteType',
     fields: [
-        { name: 'title', type: CommonFieldTypes.SingleLineText },
-        { name: 'description', type: CommonFieldTypes.MultiLineText },
-        { name: 'image', type: CommonFieldTypes.Image},
+      { name: 'title', type: CommonFieldTypes.SingleLineText },
+      { name: 'description', type: CommonFieldTypes.MultiLineText },
+      { name: 'image', type: CommonFieldTypes.Image },
     ],
   });
   manifest.addComponent({
     name: 'OurServices',
     icon: SitecoreIcon.DocumentTag,
-    fields: [      
+    fields: [
       { name: 'heading', type: CommonFieldTypes.SingleLineText },
       { name: 'ctaButtonText', type: CommonFieldTypes.SingleLineText },
       {
         name: 'ourServices',
         type: CommonFieldTypes.ContentList,
         source: `dataSource=/sitecore/content/${packageJson.config.appName}/home/our-services`,
-      }],
-})
+      },
+    ],
+  });
 }

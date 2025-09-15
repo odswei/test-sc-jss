@@ -1,5 +1,5 @@
-id: linkedin-shared-1
-displayName: LinkedIn
+id: google-plus-shared-1
+displayName: Google Plus
 template: Social-Link-Item-Template
 fields:
   externalLink:
@@ -10,5 +10,5 @@ fields:
     class: ""
     title: "Follow us on LinkedIn"
   iconClass:
-    value: "fa-brands fa-linkedin-in"
+    value: "fab fa-google-plus-g"
   logoImage: null

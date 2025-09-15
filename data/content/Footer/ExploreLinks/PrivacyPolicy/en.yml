@@ -1,0 +1,8 @@
+id: privacy-policy-link
+displayName: Privacy Policy
+template: NavLink-Item-Template
+fields:
+  linkUrl:
+    href: "/privacy-policy"
+    text: Privacy Policy
+    linktype: internal

@@ -1,0 +1,14 @@
+id: linkedin-header-shared-1
+displayName: LinkedIn
+template: Social-Link-Item-Template
+fields:
+  externalLink:
+    href: https://linkedin.com/
+    target: "_blank"
+    text: "LinkedIn"
+    linktype: "external"
+    class: ""
+    title: "Follow us on LinkedIn"
+  iconClass:
+    value: "fa-brands fa-linkedin-in"
+  logoImage: null

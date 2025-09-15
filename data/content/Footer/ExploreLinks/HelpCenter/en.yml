@@ -1,0 +1,8 @@
+id: help-center-link
+displayName: Help Center
+template: NavLink-Item-Template
+fields:
+  linkUrl:
+    href: "/help-center"
+    text: Help Center
+    linktype: internal

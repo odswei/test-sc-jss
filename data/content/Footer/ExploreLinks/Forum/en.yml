@@ -1,0 +1,8 @@
+id: forum-link
+displayName: Forum
+template: NavLink-Item-Template
+fields:
+  linkUrl:
+    href: "/"
+    text: Forum
+    linktype: internal

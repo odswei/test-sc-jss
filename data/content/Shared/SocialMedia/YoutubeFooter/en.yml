@@ -1,0 +1,13 @@
+id: youtube-footer-shared-1
+displayName: YouTube
+template: Social-Link-Item-Template
+fields:
+  externalLink:
+    href: https://youtube.com/
+    target: "_blank"
+    text: "YouTube"
+    linktype: "external"
+    class: ""
+    title: "Watch us on YouTube"
+  iconClass: fab fa-youtube-square
+  logoImage: null

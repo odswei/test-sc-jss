@@ -13,5 +13,6 @@ export default function Footer(manifest: Manifest): void {
     fields: [
       { name: 'content', type: CommonFieldTypes.RichText },
     ],
+    placeholders: ['jss-footer-social','jss-footer-left', 'jss-footer-center', 'jss-footer-right'],
   });
 }

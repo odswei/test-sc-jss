@@ -7,29 +7,27 @@ import packageJson from '../../../package.json';
  * This function is invoked by convention (*.sitecore.ts) when 'jss manifest' is run.
  * @param {Manifest} manifest Manifest instance to add components to
  */
-export default function Navigation(manifest: Manifest): void {
+export default function LatestPost(manifest: Manifest): void {
   manifest.addComponent({
-    name: 'NavigationHeader',
-    icon: SitecoreIcon.DocumentTag,
-    fields: [
-      {
-        name: 'sharedNavLinks',
-        type: CommonFieldTypes.ContentList,
-        source: `dataSource=/sitecore/content/${packageJson.config.appName}/Content/Header/Navigation`,
-      },
-    ],
-  });
-
-  manifest.addComponent({
-    name: 'NavigationFooter',
+    name: 'LatestPost',
     icon: SitecoreIcon.DocumentTag,
     fields: [
       { name: 'title', type: CommonFieldTypes.SingleLineText },
       {
-        name: 'sharedNavLinks',
+        name: 'latestPost',
         type: CommonFieldTypes.ContentList,
-        source: `dataSource=/sitecore/content/${packageJson.config.appName}/Content/Header/Navigation`,
+        source: `dataSource=/sitecore/content/${packageJson.config.appName}/home/latest-post`,
       },
     ],
   });
+
+  manifest.addTemplate({
+    name: 'Latest-Post-Item-Template',
+    icon: SitecoreIcon.DocumentTag,
+    fields: [
+      { name: 'day', type: CommonFieldTypes.Number},
+      { name: 'month', type: CommonFieldTypes.SingleLineText},
+      { name: 'title', type: CommonFieldTypes.SingleLineText}
+    ]
+  })
 }
